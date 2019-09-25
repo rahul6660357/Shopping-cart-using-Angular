@@ -7,6 +7,11 @@ import {MyprofileComponent} from './myprofile/myprofile.component';
 
 export const MAIN_ROUTES: Routes = [
   {
+    path: '',
+   redirectTo: 'userlogin',
+    pathMatch: 'full',
+  },
+  {
     path: 'home',
     component: HomePageComponent,
   },
@@ -25,5 +30,9 @@ export const MAIN_ROUTES: Routes = [
   {
     path: 'myprofile',
     component: MyprofileComponent,
+  },
+  {
+    path: '**',
+    redirectTo: 'home'
   }
   ];

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Details} from '../Details';
+import { Router} from '@angular/router';
+
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -7,11 +9,14 @@ import {Details} from '../Details';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router: Router) { }
   details = Details;
 
 
   ngOnInit() {
-  }
+    }
+gotodeatils(id1) {
 
+  this.router.navigate(['/details'], {queryParams: {id: id1}});
+}
 }
