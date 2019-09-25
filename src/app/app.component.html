@@ -1,24 +1,16 @@
+
 <div class="bg-dark">
   <div class="d-flex">
     <div class="mr-auto text-white"><h3 class="company-style mt-1">Rahul's_Shopping-Cart</h3></div>
     <div class="p-2 text-white"><button class="btn btn-dark">Add New Product</button></div>
-    <div class="p-2"><button class="btn btn-dark">My Profile</button></div>
-    <div class="p-2"><button class="btn btn-dark">My Cart</button></div>
-    <div class="p-2"><button class="btn btn-dark">LogOut</button></div>
+    <div class="p-2"><button class="btn btn-dark"><a style="text-decoration: none" class="text-white" [routerLink]="['/myprofile']">My Profile</a></button></div>
+    <div class="p-2"><button class="btn btn-dark"><a style="text-decoration: none" class="text-white" [routerLink]="['/usercart']"> My Cart </a></button></div>
+    <div class="p-2"><button class="btn btn-dark"><a style="text-decoration: none" class="text-white" [routerLink]="['/userlogin']">LogIn</a></button></div>
   </div>
-  <div class="search">
-    <div class="input-group" >
-      <input style="width:500px" type="text" class="form-control" placeholder="Search Product">
-      <div class="input-group-append">
-        <button class="btn btn-info" type="button">
-          <i class="fa fa-fw fa-search"></i>
-        </button>
-      </div>
-    </div>
-  </div>
+<div *ngIf="!(router.url.indexOf('userlogin') > -1) && !(router.url.indexOf('myprofile') > -1)"><app-nav-bar></app-nav-bar>
+</div>
 
-<app-nav-bar></app-nav-bar>
-  </div>
+
 <router-outlet></router-outlet>
 
-
+</div>

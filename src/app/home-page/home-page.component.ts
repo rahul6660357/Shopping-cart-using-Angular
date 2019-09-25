@@ -6,9 +6,10 @@ import {Details} from '../Details';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-  details = Details;
 
   constructor() { }
+  details = Details;
+
 
   ngOnInit() {
   }
