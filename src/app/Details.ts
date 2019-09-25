@@ -53,62 +53,62 @@ export const Details = [
     name: 'Reebok',
     url: '../assets/Images/shoes1.png',
     price: 25000,
-    description: ''
+    description: 'A large phone with one of the best screens'
   },
   {
     id: 9,
     name: 'green tshirt',
     url: '../assets/Images/tshirt1.jpg',
     price: 250,
-    description: ''
+    description: 'A large phone with one of the best screens'
   },
   {
     id: 10,
     name: 'red tshirt',
     url: '../assets/Images/tshirt2.jpg',
     price: 250,
-    description: ''
+    description: 'A large phone with one of the best screens'
   },
   {
     id: 11,
     name: 'white tshirt',
     url: '../assets/Images/tshirt3.jpg',
     price: 250,
-    description: ''
+    description: 'A large phone with one of the best screens'
   },
   {
     id: 12,
     name: 'electronics',
     url: '../assets/Images/elect.jpg',
     price: 25000,
-    description: ''
+    description: 'A large phone with one of the best screens'
   },
   {
     id: 13,
     name: 'Electronics',
     url: '../assets/Images/elect2.jpg',
     price: 250,
-    description: ''
+    description: 'A large phone with one of the best screens'
   },
   {
     id: 14,
     name: 'Novel',
     url: '../assets/Images/novel1.webp',
     price: 250,
-    description: ''
+    description: 'A large phone with one of the best screens'
   },
   {
     id: 15,
     name: 'Novel',
     url: '../assets/Images/novel2.webp',
     price: 250,
-    description: ''
+    description: 'A large phone with one of the best screens'
   },
   {
     id: 16,
     name: 'Novel',
     url: '../assets/Images/novel3.png',
     price: 250,
-    description: ''
+    description: 'A large phone with one of the best screens'
   }
 ];

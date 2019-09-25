@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Details} from '../Details';
 import { Router} from '@angular/router';
+import {$} from 'protractor';
 
 @Component({
   selector: 'app-home-page',
@@ -14,7 +15,7 @@ export class HomePageComponent implements OnInit {
 
 
   ngOnInit() {
-    }
+        }
 gotodeatils(id1) {
 
   this.router.navigate(['/details'], {queryParams: {id: id1}});
