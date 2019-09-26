@@ -1,13 +1,13 @@
 
-<div class="bg-dark">
-  <div class="d-flex">
+<div class="bg-dark ">
+  <div class="d-flex flex-wrap">
     <div class="mr-auto text-white"><h3 class="company-style mt-1">Rahul's_Shopping-Cart</h3></div>
     <div class="p-2 text-white"><button class="btn btn-dark">Add New Product</button></div>
     <div class="p-2"><button class="btn btn-dark"><a style="text-decoration: none" class="text-white" [routerLink]="['/myprofile']">My Profile</a></button></div>
     <div class="p-2"><button class="btn btn-dark"><a style="text-decoration: none" class="text-white" [routerLink]="['/usercart']"> My Cart </a></button></div>
     <div class="p-2"><button class="btn btn-dark"><a style="text-decoration: none" class="text-white" [routerLink]="['/userlogin']">LogIn</a></button></div>
   </div>
-<div *ngIf="!(router.url.indexOf('userlogin') > -1) && !(router.url.indexOf('myprofile') > -1)"><app-nav-bar></app-nav-bar>
+<div *ngIf="!(router.url.indexOf('userlogin') > -1) && !(router.url.indexOf('myprofile') > -1)&& !(router.url.indexOf('signup') > -1)"><app-nav-bar></app-nav-bar>
 </div>
 
 

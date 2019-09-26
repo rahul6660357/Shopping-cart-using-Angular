@@ -11,7 +11,6 @@ export class ProductDetailsComponent implements OnInit {
 userid;
   constructor(private activatedroute: ActivatedRoute) { }
   details = Details;
-  data2;
   private list: { price: number; name: string; description: string; id: number; url: string };
 
   ngOnInit() {
