@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Details} from '../Details';
 import { Router} from '@angular/router';
-import {$} from 'protractor';
+import {ItemserviceService} from '../itemservice.service';
 
 @Component({
   selector: 'app-home-page',
@@ -9,15 +9,19 @@ import {$} from 'protractor';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-
-  constructor( private router: Router) { }
+  Names;
+  constructor( private router: Router, private service: ItemserviceService) { }
   details = Details;
 
 
   ngOnInit() {
+    this.service.getDetails().subscribe((data) => {
+      this.Names = data;
+    });
         }
 gotodeatils(id1) {
 
   this.router.navigate(['/details'], {queryParams: {id: id1}});
 }
+
 }

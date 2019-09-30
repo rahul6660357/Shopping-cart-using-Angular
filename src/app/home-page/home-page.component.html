@@ -1,17 +1,5 @@
 
-<div class="search" >
-  <div class="input-group" >
-    <input type="text" class="form-control" placeholder="Search Product">
-    <div class="input-group-append">
-      <button class="btn btn-info" type="button">
-        <i class="fa fa-fw fa-search"></i>
-      </button>
-    </div>
-  </div>
-</div>
-
-
-<div class="container">
+<div class="container-fluid">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -23,15 +11,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img height="50%" src="../assets/Images/shop1.jpg" alt="Los Angeles" style="width:50%;">
+        <img height="50%" src="../assets/Images/img1.jpg" alt="Los Angeles" style="width:100%;">
       </div>
 
       <div class="item">
-        <img height="50%" src="../assets/Images/shop2.jpg" alt="Chicago" style="width:50%;">
+        <img height="50%" src="../assets/Images/img2.jpg" alt="Chicago" style="width:100%;">
       </div>
 
       <div class="item">
-        <img height="50%" src="../assets/Images/shop3.png" alt="New york" style="width:50%;">
+        <img height="50%" src="../assets/Images/img3.jpg" alt="New york" style="width:100%;">
       </div>
     </div>
 
@@ -48,42 +36,58 @@
 </div>
 
 
+
+<div class="search" >
+  <div class="input-group" >
+    <input type="text" class="form-control" placeholder="Search Product">
+    <div class="input-group-append">
+      <button class="btn btn-info" type="button">
+        <i class="fa fa-fw fa-search"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+
 <div class="d-flex" style="background-color: lightgray">
-<div style="background-color: gray()" class="  w-25"  >
-  <h4 class="text-center mt-4 company-style">Filter Items</h4>
-  <div  style="margin-left:10px;margin-top:10px">
-    <div class="card bg-info m-5">
-      <div class="card-body">
-        <h4>Price</h4>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="checkbox" class="form-check-input" value="">0-500
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="checkbox" class="form-check-input" value="">500-1000
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="checkbox" class="form-check-input" value="">1000-1500
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="checkbox" class="form-check-input" value="">1500-2000
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="checkbox" class="form-check-input" value="">2000=3000
-          </label>
+  <div style="background: gray()" class=" w-25"  >
+    <div class="mt-3">
+      <h3 class="company-style text-white text-center">Filter Items</h3>
+      <div class="card bg-info mt-3 mx-5 ">
+        <div class="card-body ">
+          <h4 class="text-white text-center">PRICE</h4>
+          <input type="checkbox" class="form-check-input" value="">
+          <div class="form-check">
+
+            <label class="form-check-label">
+             200-500
+            </label>
+          </div>
+          <input type="checkbox" class="form-check-input" value="">
+          <div class="form-check">
+            <label class="form-check-label">
+             500-1500
+            </label>
+          </div>
+          <input type="checkbox" class="form-check-input" value="">
+          <div class="form-check">
+            <label class="form-check-label">
+              1500-3000
+            </label>
+          </div>
+          <input type="checkbox" class="form-check-input" value="">
+          <div class="form-check">
+            <label class="form-check-label">
+             3000-5000
+            </label>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+<!--</div>-->
 
 
 
@@ -91,9 +95,9 @@
 
 
 
-    <div *ngFor="let Detail of details" class="m-2">
+    <div *ngFor="let Detail of details" class="m-2 ml-4">
 
-    <div class="card" style="width:225px; height: 320px">
+    <div class="card" style="width:225px; height: 250px">
 
       <div class="mt-3 mx-auto">
 <!--        <i class="material-icons w-100"  style="font-size: 100px">-->
@@ -104,10 +108,10 @@
       <div class="card-body text-center">
         <h4 class="card-title text-center mb-2">{{Detail.name}}</h4>
 
-        <div class="bg-success text-white text-center mb-3">{{Detail.price}}</div>
+        <div class="bg-success text-white text-center mb-3 mx-5">{{Detail.price}}</div>
 
         <a href="#" class="btn btn-primary mb-2 stretched-link">Add To Cart</a><br>
-        <a style="cursor: pointer" class="text-danger stretched-link mb-3" (click)="gotodeatils(Detail.id)">View Details</a>
+        <a style="cursor: pointer;font-size: small" class="text-danger stretched-link mb-3" (click)="gotodeatils(Detail.id)"><b>View Details</b></a>
       </div>
     </div>
 
