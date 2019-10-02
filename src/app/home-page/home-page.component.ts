@@ -18,10 +18,45 @@ export class HomePageComponent implements OnInit {
     this.service.getDetails().subscribe((data) => {
       this.Names = data;
     });
-        }
+  }
 gotodeatils(id1) {
 
   this.router.navigate(['/details'], {queryParams: {id: id1}});
 }
 
+  showelectrical() {
+
+    this.service.getelectical('electrical').subscribe((data1) => {
+      this.Names = data1;
+    });
+  }
+
+  showhome() {
+    this.service.getDetails().subscribe((data2) => {
+      this.Names = data2;
+    });
+  }
+
+  showbooks() {
+    this.service.getelectical('book').subscribe((data2) => {
+      this.Names = data2;
+    });
+  }
+
+  showshoes() {
+    this.service.getelectical('shoes').subscribe((data3) => {
+      this.Names = data3;
+    });
+  }
+
+  showclothes() {
+    this.service.getelectical('clothes').subscribe((data4) => {
+      this.Names = data4;
+    });
+  }
+  handleSelectedevent($event, number1, number2) {
+    this.service.getbypricebtw(number1, number2).subscribe((data4) => {
+      this.Names = data4;
+    });
+  }
 }

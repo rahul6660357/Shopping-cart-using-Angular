@@ -16,6 +16,10 @@ export const MAIN_ROUTES: Routes = [
     path: 'home',
     component: HomePageComponent,
   },
+  // {
+  //   path: 'home/:category',
+  //   component: HomePageComponent
+  // },
   {
     path: 'usercart',
     component: UserCartComponent,

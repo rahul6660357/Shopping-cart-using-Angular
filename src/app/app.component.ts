@@ -12,4 +12,8 @@ export class AppComponent implements OnInit {
   constructor(private router: Router) { }
   ngOnInit() {
   }
+
+  logoutbtn() {
+    sessionStorage.removeItem('username');
+  }
 }

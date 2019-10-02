@@ -10,4 +10,10 @@ export class ItemserviceService {
   getDetails() {
     return this.httpClient.get('http://localhost:8080/product/productdetails');
   }
+  getelectical(type) {
+    return this.httpClient.get('http://localhost:8080/product/productcatogory/' + type);
+  }
+  getbypricebtw(type1 , type2) {
+    return this.httpClient.get('http://localhost:8080/product/productpricebtw/' + type1 + '/' + type2 );
+  }
 }

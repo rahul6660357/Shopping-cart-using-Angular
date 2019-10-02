@@ -18,8 +18,8 @@
       <i class="material-icons text-dark ">fingerprint</i>
       <input type="Password" class="form-control border-0 w-75 " id="password" placeholder="Password" name="Password">
     </div>
-    <a class="text-white" [routerLink]="['/home']">
-    <div class="w-75 text-center color-white mx-auto py-2 mt-4 " style="background-color: #0080FF">
+    <a class="text-white"  >
+    <div (click)="checkLogin()" class="w-75 text-center color-white mx-auto py-2 mt-4 " style="background-color: #0080FF; cursor : pointer">
       LOGIN
      </div></a>
     <div class="text-center w-75 color-white mx-auto mt-2 mb-5">Forgot Password?</div>
