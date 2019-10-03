@@ -16,4 +16,7 @@ export class ItemserviceService {
   getbypricebtw(type1 , type2) {
     return this.httpClient.get('http://localhost:8080/product/productpricebtw/' + type1 + '/' + type2 );
   }
+  getbypricebtwcat(type1, type2, type3) {
+    return this.httpClient.get('http://localhost:8080/product/productpricebtwcat/' + type1 + '/' + type2 + '/' + type3);
+  }
 }

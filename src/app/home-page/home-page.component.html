@@ -2,7 +2,7 @@
 
 <ul style="cursor: pointer" class="nav nav-pills nav-fill bg-info sticky">
   <li class="nav-item">
-    <a (click)="showhome()" class="nav-link text-white">HOME</a>
+    <a (click)="showhome()" class="nav-link text-white active">HOME</a>
   </li>
   <li class="nav-item">
 
@@ -83,7 +83,7 @@
 
         <div style="font-size: small">
           <div class="radio">
-            <label><input type="radio" name="optradio" (change)="handleSelectedevent($event,0,1000)" checked>0-1000</label>
+            <label><input type="radio" name="optradio" (change)="handleSelectedevent($event,0,1000)">0-1000</label>
           </div>
           <div class="radio">
             <label><input type="radio" (change)="handleSelectedevent($event,1000,2000)" name="optradio">1000-2000</label>
@@ -121,14 +121,13 @@
       <div class="card-body text-center">
         <h4 class="card-title text-center mb-2">{{Detail.name}}</h4>
 
-        <div class="bg-success text-white text-center mb-3 mx-5">{{Detail.price}}</div>
-
+        <div class="bg-success text-white text-center mb-3 mx-5">Price: {{Detail.price}}</div>
         <a href="#" class="btn btn-primary mb-2 stretched-link">Add To Cart</a><br>
-        <a style="cursor: pointer;font-size: small" class="text-danger stretched-link mb-3" (click)="gotodeatils(Detail.id)"><b>View Details</b></a>
+        <a style="cursor: pointer;font-size: small" class="text-danger stretched-link mb-3" (click)="gotodeatils(Detail.product_id)"><b>View Details</b></a>
       </div>
     </div>
 
     </div>
 </div>
 </div>
-<!--<div (click)="showelectrical()" class="btn btn-primary">Electrical</div>-->
+
