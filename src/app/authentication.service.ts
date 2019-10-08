@@ -1,14 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {map} from "rxjs/operators";
-
-
-export class User {
-  constructor(
-    public status: string,
-  ) { }
-
-}
+import {map} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -19,24 +11,17 @@ export class AuthenticationService {
   constructor(private httpClient: HttpClient) { }
 
   authenticate(username, password) {
-    console.log(username);
-    console.log(password);
     const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
-    return this.httpClient.get<User>('http://localhost:8080/employees/validateLogin', { headers }).pipe(
+    return this.httpClient.get('http://localhost:8081/Users/get1', { headers }).pipe(
       map(
         userData => {
-          sessionStorage.setItem('username', username);
-          const authString = 'Basic ' + btoa(username + ':' + password);
-          sessionStorage.setItem('basicauth', authString);
-          return userData;
+          sessionStorage.setItem('token', btoa(username + ':' + password));
         }
-      )
-
-    );
+      ));
   }
 
   isUserLoggedIn() {
-    const user = sessionStorage.getItem('username');
+    const user = sessionStorage.getItem('token');
     console.log(!(user === null));
     return !(user === null);
   }
@@ -44,4 +29,9 @@ export class AuthenticationService {
   logOut() {
     sessionStorage.removeItem('username');
   }
+
+  // sendnewUser(data: { password; firstname; email })
+  // {
+  //   return this.httpClient.post('http://localhost:8081/Users/adduser');
+  // }
 }

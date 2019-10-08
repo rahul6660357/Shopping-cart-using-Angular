@@ -11,6 +11,10 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { MyprofileComponent } from './myprofile/myprofile.component';
 import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+import {ItemserviceService} from './itemservice.service';
+import {AppService} from './app.service';
+import {AuthenticationService} from './authentication.service';
 
 @NgModule({
   declarations: [
@@ -26,9 +30,10 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ItemserviceService, AppService, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

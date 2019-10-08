@@ -1,34 +1,36 @@
-<div class="background text-white pb-5 ">
-  <div class="text-center mx-auto py-5">
-    <h1>BASIC LOGIN FORM</h1>
-  </div>
-  <div class="back w-50 mx-auto my-5 pb-4">
-    <div class="text-center px-3 py-3">
-      <button type="button" class="close text-white" data-dismiss="alert">&times;</button>
-    </div>
-    <div class="text-center pb-5 pt-3 mx-auto">
-      <h1>LOGIN</h1>
-    </div>
-    <div class="w-75 bg-white mx-auto px-3 form-inline my-3 mb-3">
-      <i class="material-icons text-dark ">perm_identity</i>
-      <input type="Username" class="form-control border-0 w-75 " id="email" placeholder="Username" name="Username">
-    </div>
 
-    <div class="w-75 bg-white mx-auto px-3 form-inline my-3 mb-3">
-      <i class="material-icons text-dark ">fingerprint</i>
-      <input type="Password" class="form-control border-0 w-75 " id="password" placeholder="Password" name="Password">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-heading">
+      <h2 class="text-center company-style mt-2">Login</h2>
     </div>
-    <a class="text-white"  >
-    <div (click)="checkLogin()" class="w-75 text-center color-white mx-auto py-2 mt-4 " style="background-color: #0080FF; cursor : pointer">
-      LOGIN
-     </div></a>
-    <div class="text-center w-75 color-white mx-auto mt-2 mb-5">Forgot Password?</div>
+    <hr />
+    <div class="modal-body">
+      <div class="form-group">
+        <div class="input-group">
+							<span class="input-group-addon">
+							<span class="glyphicon glyphicon-user"></span>
+							</span>
+          <input type="text" class="form-control" placeholder="User Name" [(ngModel)]="username"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+							<span class="input-group-addon">
+							<span class="glyphicon glyphicon-lock"></span>
+							</span>
+          <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password"/>
 
+        </div>
 
-    <div class="justify-content-center text-center">
-    <div class="mt-2 color-white mx-auto mb-3">New User! register here</div>
+      </div>
 
-    <div class="btn btn-primary"><a class="text-white" [routerLink]="['/signup']"> SIGN Up</a></div>
+      <div class="form-group text-center">
+        <button class="btn btn-success btn-lg" (click)="login()">Login</button>
+
+        <a  class="btn btn-link" [routerLink]="['/signup']">Sign-Up</a>
+      </div>
     </div>
   </div>
 </div>
+
