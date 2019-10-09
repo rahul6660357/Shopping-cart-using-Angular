@@ -1,9 +1,9 @@
 <div class="signup-form">
   <form>
     <h1 class="company-style text-dark">Sign Up</h1>
-    <input type="text" placeholder="Full Name" class="txtb" [(ngModel)]="Username">
-    <input type="email" placeholder="Email" class="txtb" [(ngModel)]="Email">
-    <input type="password" placeholder="Password" class="txtb" [(ngModel)]="Password">
+    <input type="text" placeholder="Full Name" class="txtb" name="Username" [(ngModel)]="Username">
+    <input type="email" placeholder="Email" class="txtb" name="Email" [(ngModel)]="Email">
+    <input type="password" placeholder="Password" class="txtb" name="Password" [(ngModel)]="Password">
     <input type="submit" value="Create Account" class="signup-btn" (click)="signupfun()">
     <a [routerLink]="['/userlogin']">Already Have one ?</a>
   </form>

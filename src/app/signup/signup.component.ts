@@ -22,6 +22,6 @@ export class SignupComponent implements OnInit {
       password: this.Password,
       firstname: this.Username
     };
- //   this.service.sendnewUser(data);
+    this.service.sendnewUser(data);
   }
 }

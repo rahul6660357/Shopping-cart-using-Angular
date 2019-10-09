@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {map} from 'rxjs/operators';
+import {Router} from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ import {map} from 'rxjs/operators';
 
 export class AuthenticationService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private router: Router) { }
 
   authenticate(username, password) {
     const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
@@ -30,8 +31,9 @@ export class AuthenticationService {
     sessionStorage.removeItem('username');
   }
 
-  // sendnewUser(data: { password; firstname; email })
-  // {
-  //   return this.httpClient.post('http://localhost:8081/Users/adduser');
-  // }
+  sendnewUser(data) {
+    return this.httpClient.post('http://localhost:8081/Users/adduser' , data).subscribe((data5) => {
+      this.router.navigate(['/userlogin']);
+    });
+  }
 }
