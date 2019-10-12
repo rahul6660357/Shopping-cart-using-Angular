@@ -122,7 +122,7 @@
         <h4 class="card-title text-center mb-2">{{Detail.name}}</h4>
 
         <div class="bg-success text-white text-center mb-3 mx-5">Price: {{Detail.price}}</div>
-        <a href="#" class="btn btn-primary mb-2 stretched-link">Add To Cart</a><br>
+        <a (click)="addtocart(Detail.product_id)" class="btn btn-primary mb-2 stretched-link">Add To Cart</a><br>
         <a style="cursor: pointer;font-size: small" class="text-danger stretched-link mb-3" (click)="gotodeatils(Detail.product_id)"><b>View Details</b></a>
       </div>
     </div>

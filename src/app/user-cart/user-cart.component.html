@@ -1,42 +1,51 @@
 <h1 class="text-white">Shopping Cart</h1>
-<div class="bg-light">
-<div class="d-flex w-50">
- <div class="m-3"> <img  height="180px" width="100px"  src="../assets/Images/novel3.png"></div>
-<div class="row m-3">
-  <div class="card" style="width: 40rem">
-    <div class="card-body text-center ">
+<div class="bg-light d-flex">
 
-<!--      <img height="50px" width="50px"  src="../assets/Images/novel3.png">-->
-      <h3 class="card-title">Product Name:-</h3>
-      <h4 class="card-title">Price:-</h4>
-      <span class="badge badge-primary">Addidas</span>
-      <span class="badge badge-secondary">Shoes</span>
-      <span class="badge badge-success">Satisfied</span>
-      <span class="badge badge-danger">Best-dealer</span>
-      <span class="badge badge-warning">Tags</span>
-      <div class="mt-2">Quantity:
-        <select name="Quatity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-        </select>
+<div class="d-flex w-75 bg-light flex-wrap">
+  <div *ngFor="let Detail of Cart" class=" mt-5 m-2 ml-4 d-flex">
+
+ <div class="m-3"> <img  height="180px" width="100px"  src="{{Detail.items.image}}"></div>
+<div class="row m-3 bg-white">
+  <div class="card bg-white" style="width: 40rem">
+    <div class="card-body text-center ">
+      <button (click)="removeitem(Detail.items.product_id)" type="button" class="close btn btn-lg" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    <h3 class="card-title">Product Name:- {{Detail.items.name}}</h3>
+      <h4 class="card-title">Price:- {{Detail.items.price}}</h4>
+
+      <h3><span class=" badge badge-primary">{{Detail.items.catogory}}</span></h3>
+      <div class="d-flex justify-content-center">
+      <h4><span class="badge badge-secondary">{{Detail.items.subcatogory}}</span></h4>
+        <h4> <span class="badge badge-success">Satisfied</span></h4>
+          <h4> <span class="badge badge-danger">Best-dealer</span></h4>
+            <h4> <span class="badge badge-warning">Tags</span></h4>
       </div>
-      <p class="card-text">This sentence is the content of the card.</p>
-      <div class="btn btn-danger text-white mt-2"><a>DELETE</a></div>
+      <div class="mt-2 d-flex justify-content-center"><div><h2>Quantity:</h2></div>
+      <div>  <h2><span class="glyphicon glyphicon-minus table-bordered a" (click)="SUBQuantity(Detail.items.product_id)"></span> {{Detail.quantity}} <span class="glyphicon glyphicon-plus border a" (click)="ADDQuantity(Detail.items.product_id)" ></span></h2>
+      </div>
+      </div>
+
     </div>
   </div>
 </div>
+
+    <div> <h3 class="card-text mt-2 " style="margin-left:30px;"><b>Details:-</b> {{Detail.items.details}}</h3></div>
   <hr>
 
 
 
     </div>
-  <div></div>
+  <div><hr/></div>
+</div>
+
+  <div class="m-5" >
+    <div class="card border-primary mb-3 text-center card1  rounded" style="width: 250px; height: 250px" >
+      <div class="card-body">
+<div> <h2>Total Price:-</h2></div>
+      </div>
+    </div>
+  </div>
 
 </div>
 

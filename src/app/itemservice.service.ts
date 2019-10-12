@@ -6,25 +6,57 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 })
 export class ItemserviceService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {
+  }
+
   getDetails() {
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders({Authorization: 'Basic ' + token});
-    return this.httpClient.get('http://localhost:8081/product/productdetails', {headers});
+    return this.httpClient.get('http://localhost:8081/product/productdetails' , {headers});
   }
+
   getelectical(type) {
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders({Authorization: 'Basic ' + token});
-    return this.httpClient.get('http://localhost:8081/product/productcatogory/' + type, {headers} );
+    return this.httpClient.get('http://localhost:8081/product/productcatogory/' + type, {headers});
   }
-  getbypricebtw(type1 , type2) {
+
+  getbypricebtw(type1, type2) {
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders({Authorization: 'Basic ' + token});
-    return this.httpClient.get('http://localhost:8081/product/productpricebtw/' + type1 + '/' + type2, {headers} );
+    return this.httpClient.get('http://localhost:8081/product/productpricebtw/' + type1 + '/' + type2, {headers});
   }
+
   getbypricebtwcat(type1, type2, type3) {
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders({Authorization: 'Basic ' + token});
     return this.httpClient.get('http://localhost:8081/product/productpricebtwcat/' + type1 + '/' + type2 + '/' + type3, {headers});
+  }
+
+  addtoCart(type) {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization: 'Basic ' + token});
+    return this.httpClient.get('http://localhost:8081/cart/addproduct/receive/' + type, {headers});
+  }
+  showcart() {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization: 'Basic ' + token});
+    return this.httpClient.get('http://localhost:8081/cart/showcart/receive', {headers});
+  }
+  addQuantity(type) {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization: 'Basic ' + token});
+    return this.httpClient.get('http://localhost:8081/cart/addquantity/' + type , {headers});
+  }
+  subQuantity(type) {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization: 'Basic ' + token});
+    return this.httpClient.get('http://localhost:8081/cart/subquantity/' + type , {headers});
+  }
+
+  removeItem(pid) {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization: 'Basic ' + token});
+    return this.httpClient.get('http://localhost:8081/cart/removefromcart/receive/' + pid , {headers});
   }
 }
