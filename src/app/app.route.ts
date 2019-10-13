@@ -5,6 +5,7 @@ import {ProductDetailsComponent} from './product-details/product-details.compone
 import {LoginComponent} from './login/login.component';
 import {MyprofileComponent} from './myprofile/myprofile.component';
 import {SignupComponent} from './signup/signup.component';
+import {OrderHistoryComponent} from './order-history/order-history.component';
 
 export const MAIN_ROUTES: Routes = [
   {
@@ -16,10 +17,10 @@ export const MAIN_ROUTES: Routes = [
     path: 'home',
     component: HomePageComponent,
   },
-  // {
-  //   path: 'home/:category',
-  //   component: HomePageComponent
-  // },
+  {
+    path: 'history',
+    component: OrderHistoryComponent
+  },
   {
     path: 'usercart',
     component: UserCartComponent,

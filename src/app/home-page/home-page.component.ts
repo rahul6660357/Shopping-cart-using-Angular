@@ -3,6 +3,7 @@ import { Router} from '@angular/router';
 import {ItemserviceService} from '../itemservice.service';
 import {AppService} from '../app.service';
 
+
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -10,7 +11,7 @@ import {AppService} from '../app.service';
 })
 export class HomePageComponent implements OnInit {
   Names;
-  constructor( private router: Router, private http: ItemserviceService, private service: AppService) { }
+  constructor( private router: Router, private http: ItemserviceService, private service: AppService ) { }
 category;
 
   ngOnInit() {

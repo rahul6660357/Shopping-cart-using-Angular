@@ -16,6 +16,7 @@ import {ItemserviceService} from './itemservice.service';
 import {AppService} from './app.service';
 import {AuthenticationService} from './authentication.service';
 import {BasicHttpInterceptService} from './basic-http-intercept.service';
+import { OrderHistoryComponent } from './order-history/order-history.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {BasicHttpInterceptService} from './basic-http-intercept.service';
     UserCartComponent,
     LoginComponent,
     SignupComponent,
-    MyprofileComponent
+    MyprofileComponent,
+    OrderHistoryComponent,
   ],
   imports: [
     BrowserModule,

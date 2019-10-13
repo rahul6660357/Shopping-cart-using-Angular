@@ -59,4 +59,33 @@ export class ItemserviceService {
     const headers = new HttpHeaders({Authorization: 'Basic ' + token});
     return this.httpClient.get('http://localhost:8081/cart/removefromcart/receive/' + pid , {headers});
   }
+
+  getTotal() {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization: 'Basic ' + token});
+    return this.httpClient.get('http://localhost:8081/cart/gettotal/recieve' , {headers});
+  }
+
+  getHistory() {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization: 'Basic ' + token});
+    return this.httpClient.get('http://localhost:8081/order/gethistory/receive' , {headers});
+  }
+  checkout() {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization: 'Basic ' + token});
+    return this.httpClient.get('http://localhost:8081/cart/checkout/recieve' , {headers});
+  }
+
+  getUserDetails() {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization: 'Basic ' + token});
+    return this.httpClient.get('http://localhost:8081/Users/getuserdetail' , {headers});
+  }
+
+  UpdatethisUser(data) {
+    console.log(data);
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization: 'Basic ' + token});
+  }
 }
