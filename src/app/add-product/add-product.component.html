@@ -1,0 +1,113 @@
+<form class="form-horizontal text-center">
+  <fieldset>
+
+    <!-- Form Name -->
+    <legend>PRODUCTS</legend>
+
+    <!-- Text input-->
+
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="product_name">PRODUCT NAME</label>
+      <div class="col-md-4">
+        <input id="product_name" name="productname" [(ngModel)]="productname" placeholder="PRODUCT NAME" class="form-control input-md" type="text">
+
+      </div>
+    </div>
+
+
+
+    <!-- Select Basic -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="product_categorie">PRODUCT CATEGORY</label>
+      <div class="col-md-4">
+        <select id="product_categorie" name="productcategorie" [(ngModel)]="productcategorie" class="form-control">
+          <option>electrical</option>
+          <option>books</option>
+          <option>clothes</option>
+          <option>shoes</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Select Basic -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="product_subcategorie">PRODUCT SUBCATEGORY</label>
+      <div class="col-md-4">
+        <select id="product_subcategorie" name="productsubcategorie" [(ngModel)]="productsubcategorie" class="form-control">
+          <option>mobile</option>
+          <option>novel</option>
+          <option>book</option>
+          <option>tshirt</option>
+          <option>fridge</option>
+          <option>washing machine</option>
+          <option>jeans</option>
+          <option>kurta</option>
+          <option>lower</option>
+          <option>underwear</option>
+          <option>lehanga</option>
+          <option>shoes</option>
+          <option>slipper</option>
+          <option>sandal</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="active">AVAILABLE</label>
+      <div class="col-md-4">
+        <select id="active" name="available" [(ngModel)]="active" class="form-control">
+          <option>0</option>
+          <option>1</option>
+
+        </select>
+      </div>
+    </div>
+
+
+
+    <!-- Textarea -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="product_description">PRODUCT DESCRIPTION</label>
+      <div class="col-md-4">
+        <textarea class="form-control" id="product_description" name="productdescription" [(ngModel)]="productdescription"></textarea>
+      </div>
+    </div>
+
+
+
+    <!-- Text input-->
+
+
+
+
+
+
+
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="price">PRODUCT PRICE</label>
+      <div class="col-md-4">
+        <input id="price" name="price" [(ngModel)]="price" placeholder="PRICE" class="form-control input-md" required="" type="text">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="image">PRODUCT IMAGE LINK</label>
+      <div class="col-md-4">
+        <input id="image" name="image" [(ngModel)]="image" placeholder="Image link" class="form-control input-md" required="" type="text">
+
+      </div>
+    </div>
+    <div class="form-group d-flex justify-content-center ">
+
+          <div class="col-md-4 ">
+            <button id="singlebutton" name="singlebutton" (click)="addproduct()" class="btn btn-primary text-center">ADD PRODUCT</button>
+          </div>
+        </div>
+  </fieldset>
+</form>

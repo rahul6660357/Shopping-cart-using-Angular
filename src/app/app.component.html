@@ -2,7 +2,7 @@
 <div class="bg-dark pb-3 ">
   <div class="d-flex flex-wrap">
     <a class="mr-auto text-white"><h3 class="company-style mt-1 " [routerLink]="['/home']">Rahul's_Shopping-Cart</h3></a>
-    <div class="p-2 text-white"><button class="btn btn-dark">Add New Product</button></div>
+    <div class="p-2 text-white"><button class="btn btn-dark" [routerLink]="['/addproduct']">Add New Product</button></div>
     <div class="p-2"><button class="btn btn-dark"><a style="text-decoration: none" class="text-white" [routerLink]="['/myprofile']">My Profile</a></button></div>
     <div class="p-2"><button class="btn btn-dark"><a style="text-decoration: none" class="text-white" [routerLink]="['/usercart']"> My Cart </a></button></div>
     <div class="p-2"><button class="btn btn-dark"><a style="text-decoration: none" class="text-white" [routerLink]="['/userlogin']">Login </a></button></div>
@@ -12,4 +12,3 @@
 
 
 <router-outlet></router-outlet>
-

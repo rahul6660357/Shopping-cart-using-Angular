@@ -10,11 +10,11 @@ import {ItemserviceService} from '../itemservice.service';
 })
 export class MyprofileComponent implements OnInit {
 Profile;
-  FirstName;
-  Password;
-  LastName;
-  Email;
-  PhnNo;
+  // firstname;
+  // lastname;
+  // email;
+  // phnno;
+  // password;
   constructor(private service: AppService, private router: Router, private http: ItemserviceService) { }
 
   ngOnInit() {
@@ -28,13 +28,14 @@ Profile;
   }
 
   UpdateUser() {
-    const data = {
-      email : this.Email,
-      password: this.Password,
-      firstname: this.FirstName,
-      lastname: this.LastName
-    };
-    console.log(data);
-   // this.http.UpdatethisUser(data);
+    // const data = {
+    //   email : this.email,
+    //   password: this.password,
+    //   firstname: this.firstname,
+    //   lastname: this.lastname,
+    //   phnno: this.phnno
+    // };
+    this.http.UpdatethisUser(this.Profile, this.Profile.userid).subscribe((data5) => {
+    });
   }
 }

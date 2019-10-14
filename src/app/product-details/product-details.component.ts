@@ -41,4 +41,9 @@ constructor(private activatedroute: ActivatedRoute, private service: Itemservice
 
     });
   }
+
+  Editproduct(pid) {
+    this.service.EditProduct(pid, this.list).subscribe((data5) => {
+    });
+  }
 }

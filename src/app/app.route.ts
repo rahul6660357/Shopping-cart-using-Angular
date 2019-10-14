@@ -6,12 +6,17 @@ import {LoginComponent} from './login/login.component';
 import {MyprofileComponent} from './myprofile/myprofile.component';
 import {SignupComponent} from './signup/signup.component';
 import {OrderHistoryComponent} from './order-history/order-history.component';
+import {AddProductComponent} from './add-product/add-product.component';
 
 export const MAIN_ROUTES: Routes = [
   {
     path: '',
    redirectTo: 'home',
     pathMatch: 'full',
+  },
+  {
+    path: 'addproduct',
+    component: AddProductComponent,
   },
   {
     path: 'home',
