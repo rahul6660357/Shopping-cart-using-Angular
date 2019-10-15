@@ -16,7 +16,7 @@ constructor(private activatedroute: ActivatedRoute, private service: Itemservice
   // details = Details;
   Names ;
   private list: {product_id: number , name: string, price: number,
-    details: string, image: object, catogory: string, subcatogory: string, active: number, itemdetails: null };
+    details: string, image: object, catogory: string, subcatogory: string, active: number};
 
   ngOnInit() {
     this.service.getDetails().subscribe((data3) => {

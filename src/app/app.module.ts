@@ -18,6 +18,7 @@ import {AuthenticationService} from './authentication.service';
 import {BasicHttpInterceptService} from './basic-http-intercept.service';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import {ParticlesModule} from "angular-particle";
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AddProductComponent } from './add-product/add-product.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ParticlesModule,
   ],
   providers: [ItemserviceService, AppService, AuthenticationService,
     {
