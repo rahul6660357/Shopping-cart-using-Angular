@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
           value: 200,
         },
         color: {
-          value: '#000'
+          value: '#0000FF'
         },
         shape: {
           type: 'star',

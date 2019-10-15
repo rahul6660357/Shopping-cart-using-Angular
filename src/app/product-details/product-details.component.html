@@ -27,12 +27,13 @@
 
 </div>
         <div class="text-center" style="float: right">
-        <div class="btn btn-primary"  data-toggle="modal" data-target="#exampleModalLong">Edit</div>
+          <div *ngIf="role == 'admin'">
+        <div  class="btn btn-primary"  data-toggle="modal" data-target="#exampleModalLong">Edit</div>
           <div class="modal fade mt-5" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog mt-5" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h3 class="modal-title " id="exampleModalLongTitle">EDIT PRODUCT</h3>
+                  <div  class="modal-title " id="exampleModalLongTitle">EDIT PRODUCT</div >
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -63,6 +64,7 @@
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </div>

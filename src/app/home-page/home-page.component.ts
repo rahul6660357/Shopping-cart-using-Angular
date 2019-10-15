@@ -13,6 +13,7 @@ export class HomePageComponent implements OnInit {
   Names;
   constructor( private router: Router, private http: ItemserviceService, private service: AppService ) { }
 category;
+  search;
 
   ngOnInit() {
     if (!this.service.checklogin()) {
@@ -76,6 +77,12 @@ gotodeatils(id1) {
   addtocart(pid) {
     this.http.addtoCart(pid).subscribe((data) => {
 
+    });
+  }
+
+  searchname() {
+    this.http.SearchByName(this.search).subscribe((data) => {
+      this.Names = data;
     });
   }
 }

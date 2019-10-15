@@ -12,6 +12,7 @@ export class AppService {
   }
   checklogin() {
     const auth = sessionStorage.getItem('auth');
+    console.log(JSON.parse(auth));
     return JSON.parse(auth);
   }
 }

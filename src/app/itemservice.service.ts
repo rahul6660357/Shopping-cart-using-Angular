@@ -99,6 +99,18 @@ export class ItemserviceService {
   EditProduct(type , data) {
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders({Authorization: 'Basic ' + token});
-    return this.httpClient.put('http://localhost:8081/product/updateitem'  + type,  data, {headers});
+    return this.httpClient.put('http://localhost:8081/product/updateitem/'  + type,  data, {headers});
+  }
+
+  SearchByName(type) {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization: 'Basic ' + token});
+    return this.httpClient.get('http://localhost:8081/product/productname/'  + type,  {headers});
+  }
+
+  getRole() {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization: 'Basic ' + token});
+    return this.httpClient.get('http://localhost:8081/Users/getuserrole' ,  {headers});
   }
 }

@@ -17,6 +17,7 @@ constructor(private activatedroute: ActivatedRoute, private service: Itemservice
   Names ;
   private list: {product_id: number , name: string, price: number,
     details: string, image: object, catogory: string, subcatogory: string, active: number};
+  role;
 
   ngOnInit() {
     this.service.getDetails().subscribe((data3) => {
@@ -25,6 +26,10 @@ constructor(private activatedroute: ActivatedRoute, private service: Itemservice
       this.userid = params.id;
       this.list = this.alldetails(this.userid);
     });
+    });
+    this.service.getRole().subscribe((data5) => {
+      this.role = data5;
+      console.log(this.role);
     });
   }
 

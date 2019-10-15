@@ -61,9 +61,9 @@
 
 <div class="search" >
   <div class="input-group" >
-    <input type="text" class="form-control" placeholder="Search Product">
+    <input type="text" class="form-control" placeholder="Search Product" name="search" [(ngModel)]="search">
     <div class="input-group-append">
-      <button class="btn btn-info" type="button">
+      <button class="btn btn-info" (click)="searchname()" type="button">
         <i class="fa fa-fw fa-search"></i>
       </button>
     </div>
