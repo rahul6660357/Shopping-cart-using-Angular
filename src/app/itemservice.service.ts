@@ -113,4 +113,17 @@ export class ItemserviceService {
     const headers = new HttpHeaders({Authorization: 'Basic ' + token});
     return this.httpClient.get('http://localhost:8081/Users/getuserrole' ,  {headers});
   }
+
+  DeleteProduct(pid) {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization: 'Basic ' + token});
+    return this.httpClient.delete('http://localhost:8081/product/deleteproduct/' + pid ,  {headers});
+  }
+
+  ClearCart() {
+    console.log('hello');
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization: 'Basic ' + token});
+    return this.httpClient.get('http://localhost:8081/cart/clearcart/recieve',  {headers});
+  }
 }

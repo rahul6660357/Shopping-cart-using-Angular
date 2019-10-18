@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {Details} from '../Details';
 import {ItemserviceService} from '../itemservice.service';
+
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-product-details',
@@ -12,7 +14,8 @@ export class ProductDetailsComponent implements OnInit {
 userid;
 
 
-constructor(private activatedroute: ActivatedRoute, private service: ItemserviceService) { }
+constructor(private activatedroute: ActivatedRoute, private service: ItemserviceService,
+            private router: Router,   private toastr: ToastrService) { }
   // details = Details;
   Names ;
   private list: {product_id: number , name: string, price: number,
@@ -29,7 +32,6 @@ constructor(private activatedroute: ActivatedRoute, private service: Itemservice
     });
     this.service.getRole().subscribe((data5) => {
       this.role = data5;
-      console.log(this.role);
     });
   }
 
@@ -43,12 +45,20 @@ constructor(private activatedroute: ActivatedRoute, private service: Itemservice
 
   addtocart(pid) {
     this.service.addtoCart(pid).subscribe((data) => {
-
+     alert('Added Successfully');
     });
   }
 
   Editproduct(pid) {
     this.service.EditProduct(pid, this.list).subscribe((data5) => {
     });
+  }
+
+  deleteproduct(pid) {
+this.service.DeleteProduct(pid).subscribe((data) => {
+
+  alert('Deleted Successfully');
+  this.router.navigate(['/home']);
+});
   }
 }

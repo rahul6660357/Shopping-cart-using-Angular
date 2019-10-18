@@ -94,4 +94,11 @@ totalprice;
     this.http.checkout().subscribe((data) => {
     });
   }
+
+  clearcart() {
+    this.http.ClearCart().subscribe((data) => {
+      alert('Cart Cleared');
+      this.router.navigate(['/home']);
+    });
+  }
 }

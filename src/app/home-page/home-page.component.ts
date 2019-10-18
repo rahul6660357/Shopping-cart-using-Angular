@@ -76,7 +76,7 @@ gotodeatils(id1) {
 
   addtocart(pid) {
     this.http.addtoCart(pid).subscribe((data) => {
-
+alert('added SuccessFully');
     });
   }
 

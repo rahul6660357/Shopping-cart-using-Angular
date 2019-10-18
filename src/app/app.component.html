@@ -6,7 +6,7 @@
     <div *ngIf="role == 'admin'"><div class="p-2 text-white"><button class="btn btn-dark" [routerLink]="['/addproduct']">Add New Product</button></div></div>
     <div class="p-2"><button class="btn btn-dark"><a style="text-decoration: none" class="text-white" [routerLink]="['/myprofile']">My Profile</a></button></div>
     <div class="p-2"><button class="btn btn-dark"><a style="text-decoration: none" class="text-white" [routerLink]="['/usercart']"> My Cart </a></button></div>
-    <div class="p-2"><button class="btn btn-dark"><a style="text-decoration: none" class="text-white" [routerLink]="['/userlogin']">Login </a></button></div>
+    <div class="p-2" *ngIf="checklgn=='false'"><button class="btn btn-dark"><a style="text-decoration: none"  class="text-white" [routerLink]="['/userlogin']">Login </a></button></div>
     <div class="p-2"><button  class="btn btn-dark"><a style="text-decoration: none" class="text-white" (click)="logout()">LogOut</a></button></div>
   </div>
 </div>

@@ -19,6 +19,8 @@ import {BasicHttpInterceptService} from './basic-http-intercept.service';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import {ParticlesModule} from 'angular-particle';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ToastrModule} from "ngx-toastr";
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import {ParticlesModule} from 'angular-particle';
     HttpClientModule,
     FormsModule,
     ParticlesModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot()
   ],
   providers: [ItemserviceService, AppService, AuthenticationService,
     {

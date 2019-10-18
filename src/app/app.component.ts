@@ -11,7 +11,7 @@ import {ItemserviceService} from './itemservice.service';
 export class AppComponent implements OnInit {
   title = 'shoppingCart';
   private role;
-
+ checklgn: string;
   constructor(private router: Router, private service: AppService, private http: ItemserviceService) {
   }
 
@@ -26,6 +26,9 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (!this.service.checklogin()) {
+      this.checklgn = 'false';
+    }
     this.http.getRole().subscribe((data5) => {
       this.role = data5;
       console.log(this.role);
