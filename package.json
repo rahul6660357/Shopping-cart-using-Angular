@@ -21,7 +21,7 @@
     "@angular/router": "~8.2.5",
     "angular-particle": "^1.0.4",
     "bootstrap": "^3.4.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ngx-bootstrap": "^5.1.2",
     "ngx-toastr": "^11.1.2",
     "particles.js": "^2.0.0",
